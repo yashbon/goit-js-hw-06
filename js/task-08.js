@@ -12,11 +12,9 @@ function onSubmit(event) {
         alert('всі поля повинні бути заповнені')
     } else {
         const userForm = {
-            email: '',
-            password: ''
+            email: userEmail,
+            password: userPassword
         }
-        userForm.email = userEmail;
-        userForm.password = userPassword;
 
         // Output to console
         console.log(userForm);
