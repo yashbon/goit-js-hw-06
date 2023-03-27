@@ -4,7 +4,7 @@ inputSymbol.addEventListener('blur', onInput)
 
 function onInput(event) {
     const dataLength = inputSymbol.getAttribute('data-length');
-    event.currentTarget.value.length >= dataLength ?
+    event.currentTarget.value.length == dataLength ?
         (
             inputSymbol.classList.remove("invalid"),
             inputSymbol.classList.add("valid")
