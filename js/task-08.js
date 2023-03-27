@@ -27,5 +27,3 @@ function onSubmit(event) {
     // form does not reload
     event.preventDefault()
 }
-
-
