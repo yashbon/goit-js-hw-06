@@ -9,17 +9,15 @@ const boxesDiv = document.querySelector('#boxes')
 const buttonDestroy = document.querySelector('[data-destroy]')
 
 buttonCreate.addEventListener('click', onClickCreate)
-buttonDestroy.addEventListener('click', onClickDestroy)
+buttonDestroy.addEventListener('click', destroyBoxes)
 
 
 function onClickCreate(event) {
   const amount = document.querySelector('[type ="number"]').value
-
   createBoxes(amount)
-
 }
 
-function onClickDestroy(event) {
+function destroyBoxes() {
   boxesDiv.innerHTML = ''
   document.querySelector('[type ="number"]').value = ''
 }
@@ -31,9 +29,7 @@ function createBoxes(amount) {
   if (amount) {
     for (let i = 1; i <= amount; i++) {
       const colorSet = getRandomHexColor();
-
       subBoxHtml += `<div style="width: ${width}px; height: ${height}px; background:${colorSet}">&nbsp;</div>`;
-
       width += 10
       height += 10
     }
